@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <meta charset="UTF-8">
+<html>
+<head>
     <title>Login</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body onload='document.f.username.focus();'>
     <div id="loginForm">
         <h3>Login With Username and Password</h3>
-        <div class="error" th:if="${param.error}">
-            Incorrect username or password. Try again.
-        </div>
+        <g:if test="${params?.error}">
+            <div class="error">
+                Incorrect username or password. Try again.
+            </div>
+        </g:if>
 
-        <form name="f" th:action="@{/login}" method="POST">
+        <form name="f" action="/login" method="POST">
             <table>
                 <tr>
                     <td>User:</td>
@@ -26,6 +27,7 @@
                     <td colspan="2"><input name="submit" type="submit" value="Login"/></td>
                 </tr>
             </table>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
         </form>
     </div>
 </body>
