@@ -2,11 +2,11 @@ package readinglist
 
 import org.springframework.context.annotation.Configuration
 
-import org.springframework.security.config.annotaion.authenticatiion.builders.AuthenticationManagerBuilder
-import org.springframework.security.config.annotaion.web.builders.HttpSecurity
-import org.springframework.secutity.config.annotaion.web.configuration.EnableWebSecurity
-import org.springframework.security.config.annotaion.web.configuration.WebSecurityConfigurerAdapter
-import org.springframework.security.core.userdatails.UserDetailsService
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
+import org.springframework.security.core.userdetails.UserDetailsService
 
 @Configuration
 @EnableWebSecurity
